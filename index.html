@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Freelance Money Calculator</title>
+  </head>
+  <body>
+    <header>
+      <h1>💰Freelance Money Calculator🤑</h1>
+    </header>
+    <form class="formCalcul" id="formulaire">
+      <div class="sectionCalcule pricing">
+        <fieldset class="form-container">
+          <legend>Vos tarifs</legend>
+          <div>
+            <label>Taux horaire €</label>
+            <input name="TH" type="number" placeholder="Ex : 20" />
+          </div>
+          <div>
+            <label>Taux journalié moyen €</label>
+            <input name="TJM" type="number" placeholder="Ex : 500" />
+          </div>
+          <div>
+            <label>EXTRA €</label>
+            <input name="EXTRA" type="number" placeholder="Ex : 2" />
+          </div>
+        </fieldset>
+      </div>
+      <div class="sectionCalcule Quantiter">
+        <fieldset class="form-container">
+          <legend>Quantités</legend>
+          <div>
+            <label>TH</label>
+            <input name="QteTH" type="number" placeholder="Ex : 1" />
+          </div>
+          <div>
+            <label>TJM</label>
+            <input name="QteTJM" type="number" placeholder="Ex : 1" />
+          </div>
+          <div>
+            <label>EXTRA</label>
+            <input name="QteEXTRA" type="number" placeholder="Ex : 2" />
+          </div>
+        </fieldset>
+      </div>
+      <div class="sectionCalcule charge">
+        <fieldset class="form-container">
+          <legend>Charges</legend>
+          <select  name="charge"id="resultatDifference">
+            <option value="">Taux ACRE</option>
+            <option class="charges" value="5.5">5.5%</option>
+            <option class="charges" value="11">11%</option>
+            <option class="charges" value="16.5">16.5%</option>
+            <option class="charges" value="22">22%</option>
+          </select>
+        </fieldset>
+      </div>
+    </form>
+    <div class="sectionCalcule validation">
+        <button class="btn1" onclick="calculGain();">Calculer</button>
+        <button class="btn2" onclick="clearInputData()">refrech</button>
+      </div>
+      <div class="box-result">
+            <div class="resultDiv resultBrut">
+                <p>BRUT</p>
+                <span id="resultatBrut">0€</span>
+            </div>
+            <div class="resultDiv resultdifference">
+                <p>TAXES</p>
+                <span id="taxe">0€</span>
+            </div>
+            <div class="resultDiv resultNet">
+                <p>NET</p>
+                <span id="resultatNet">0€</span>
+            </div>
+      </div> 
+      <div>
+        <p class="copyright">&copy; 2021–2022 creat by saad ben cheikh</p>
+      </div>
+    <script src="main.js"></script>
+  </body>
+</html>
